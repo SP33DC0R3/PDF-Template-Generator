@@ -15,6 +15,9 @@ for index, row in df.iterrows():
     pdf.cell(w=0, h=12, txt=row["Topic"], align="l", ln=1)
     pdf.line(10, 21, 200, 21)
 
+    for i in range(31, 286, 10):
+        pdf.line(10, i, 200, i)
+
     # Set the Footer
     pdf.ln(265)
     pdf.line(10, 286, 200, 286)
