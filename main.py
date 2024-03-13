@@ -34,4 +34,7 @@ for index, row in df.iterrows():
         pdf.set_font(family="arial", style="I", size=10)
         pdf.cell(w=0, h=10, txt=row["Topic"], align="R", ln=1)
 
+        for i in range(31, 286, 10):
+            pdf.line(10, i, 200, i)
+
 pdf.output("output.pdf")
